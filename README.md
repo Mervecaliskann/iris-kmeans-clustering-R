@@ -17,8 +17,7 @@ Bu projeyi çalıştırmak için aşağıdaki R paketlerine ihtiyacınız vardı
 
 Bu paketleri yüklemek için R konsolunda aşağıdaki komutları çalıştırabilirsiniz:
 
-```r
-install.packages("ggplot2")
+`install.packages("ggplot2")`
 
 R Ortamını Açın: R veya RStudio'yu başlatın.
 
@@ -26,22 +25,22 @@ Gerekli Kütüphaneleri Yükleyin: Aşağıdaki kodu çalıştırarak gerekli k�
 
 Veri Setini Yükleyin: Iris veri setini yüklemek için aşağıdaki kodu kullanın.
 
-data(iris)
+`data(iris)`
 
 
 K-Means Kümeleme Analizini Gerçekleştirin: Aşağıdaki kodu çalıştırarak k-means kümeleme analizi yapın.
 
-set.seed(15)
-irisCluster <- kmeans(iris[, 3:4], centers = 3, nstart = 15)
+`set.seed(15)`
+`irisCluster <- kmeans(iris[, 3:4], centers = 3, nstart = 15)`
 
 Sonuçları Görselleştirin: Kümeleme sonuçlarını görselleştirmek için aşağıdaki kodu kullanın.
 
-ggplot(iris, aes(Petal.Length, Petal.Width, color = as.factor(irisCluster$cluster))) + 
+`ggplot(iris, aes(Petal.Length, Petal.Width, color = as.factor(irisCluster$cluster))) + 
   geom_point() +
   labs(title = "K-Means Kümeleme Sonuçları", 
        x = "Petal Uzunluğu", 
        y = "Petal Genişliği") +
-  theme_minimal()
+  theme_minimal()`
 
 Sonuçlar
 K-means algoritması, iris veri setindeki gözlemleri üç kümeye ayırmıştır. Görselleştirme, her bir kümenin petal uzunluğu ve genişliği açısından nasıl dağıldığını göstermektedir. Kümeleme sonuçları, çiçek türlerinin belirlenmesine yardımcı olabilir.
